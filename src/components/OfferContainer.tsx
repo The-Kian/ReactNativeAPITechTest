@@ -2,10 +2,25 @@ import React from 'react';
 import { SafeAreaView, FlatList, StyleSheet, Text } from 'react-native';
 import OfferCard from '@components/OfferCard';
 import { MOCK_OFFERS } from '@test-utils/mockOffers';
+import { useFetchProducts } from '@hooks/useFetchProducts';
+import LoadingIndicator from './LoadingIndicator';
+import ErrorIndicator from './ErrorIndicator';
 
 const OfferContainer = () => {
+  const { products, isLoading, error } = useFetchProducts();
+  console.log(`🚀 - KP -  ~ OfferContainer ~ products:`, products)
+
+  if (isLoading) {
+    return <LoadingIndicator />;
+  }
+
+  if (error) {
+    return <ErrorIndicator />;
+  }
+
   return (
     <SafeAreaView style={styles.container}>
+      
       <FlatList
         data={MOCK_OFFERS} // Use the mock data for now
         renderItem={({ item }) => <OfferCard {...item} />}

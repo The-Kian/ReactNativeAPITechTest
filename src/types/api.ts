@@ -12,3 +12,15 @@ export interface Offer {
   image?: string;
   merchant: Merchant;
 }
+
+interface WidgetData {
+  offers: Offer[];
+}
+
+interface Widget {
+  data: WidgetData;
+}
+
+export interface ApiResponse {
+  widget: Widget;
+}

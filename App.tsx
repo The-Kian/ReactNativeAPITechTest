@@ -1,8 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import ProductRow from '@components/OfferCard';
 import { MOCK_OFFERS } from '@test-utils/mockOffers';
-import ProductListScreen from '@screens/OfferContainer';
+import ProductListScreen from '@components/OfferContainer';
 
 
 
