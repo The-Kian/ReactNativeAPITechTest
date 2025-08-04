@@ -1,7 +1,6 @@
 import React from 'react';
 import { SafeAreaView, FlatList, StyleSheet, Text } from 'react-native';
 import OfferCard from '@components/OfferCard';
-import { MOCK_OFFERS } from '@test-utils/mockOffers';
 import { useFetchProducts } from '@hooks/useFetchProducts';
 import LoadingIndicator from './LoadingIndicator';
 import ErrorIndicator from './ErrorIndicator';
@@ -15,15 +14,15 @@ const OfferContainer = () => {
   }
 
   if (error) {
-    return <ErrorIndicator />;
+    return <ErrorIndicator errorMessage={error}/>;
   }
 
   return (
     <SafeAreaView style={styles.container}>
       
       <FlatList
-        data={MOCK_OFFERS} // Use the mock data for now
-        renderItem={({ item }) => <OfferCard {...item} />}
+        data={products} 
+        renderItem={({ item }) => <OfferCard offer = {item} />}
         keyExtractor={(item) => item.offer_id}
         ListHeaderComponent={
           <Text style={styles.header}>Xbox One S Offers</Text>

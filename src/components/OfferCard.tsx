@@ -1,12 +1,16 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, Linking, TouchableOpacity } from 'react-native';
-import { Offer } from '@app-types/api'; 
+import { Offer } from '@app-types/internal'; 
+interface OfferCardProps {
+  offer: Offer;
+}
 
-const OfferCard = (offer: Offer) => {
+const OfferCard = ({offer}: OfferCardProps) => {
   const handlePress = () => {
     Linking.openURL(offer.link).catch((err) => console.error("Couldn't load page", err));
   };
 
+  console.log(`🚀 - KP -  ~ OfferCard ~ offer.image:`, offer.image)
   return (
     <TouchableOpacity onPress={handlePress} style={styles.card}>
       <Image

@@ -1,8 +1,8 @@
 import { View, Text, StyleSheet } from 'react-native';
-const ErrorIndicator = () => {
+const ErrorIndicator = ({errorMessage}) => {
     return (
         <View style={styles.container}>
-        <Text style={styles.errorText}>An error occurred while fetching data.</Text>
+        <Text style={styles.errorText}>{errorMessage}</Text>
         </View>
     );
     }
