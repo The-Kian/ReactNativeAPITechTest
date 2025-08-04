@@ -1,6 +1,18 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@screens/*": ["src/screens/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@app-types/*": ["src/types/*"],
+      "@test-utils/*": ["src/test-utils/*"],
+    }
+  },
+  "include": [
+    "src/**/*",
+    "App.tsx",
+    "tsconfig.json"
+  ]
 }
