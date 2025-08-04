@@ -15,7 +15,7 @@ const OfferCard = (offer: Offer) => {
         resizeMode="contain"
       />
       <View style={styles.infoContainer}>
-        <Text style={styles.productName} numberOfLines={2}>
+        <Text style={styles.productName}>
           {offer.name}
         </Text>
         <Text style={styles.price}>
@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 3,
     alignItems: 'center',
+    flex: 1
   },
   productImage: {
     width: 80,
@@ -71,6 +72,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: 8,
+    width: '100%',
+    justifyContent: 'flex-start',
+    flexWrap: 'wrap',
   },
   merchantLogo: {
     width: 20,
@@ -80,6 +84,7 @@ const styles = StyleSheet.create({
   merchantName: {
     fontSize: 14,
     color: '#666',
+    width: 'auto'
   },
 });
 
