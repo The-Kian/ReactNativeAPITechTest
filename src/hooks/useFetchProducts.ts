@@ -1,5 +1,3 @@
-// src/hooks/useFetchProducts.ts
-
 import { useState, useEffect } from "react";
 import { Offer } from "@app-types/internal";
 import { transformApiData } from "@utils/apiDataTransformer";

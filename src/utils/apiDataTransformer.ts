@@ -1,5 +1,3 @@
-// src/utils/apiDataTransformer.ts
-
 import { ApiResponse } from "@app-types/api";
 import { Offer } from "@app-types/internal";
 import he from "he";
@@ -15,11 +13,14 @@ export const transformApiData = (
 ): TransformedData => {
   const { widget, models } = apiResponse;
 
-  const title = widget.data.title;
-  const modelId = models[modelName];
-  const mainImageUrl = widget.data.model_info[modelId]?.model_image_url || "";
+  const title = widget?.data?.title || '';
+  const modelId = models ? models[modelName] : undefined;
+  if (!modelId) {
+    return { title: widget?.data?.title || '', products: [] };
+  }
+  const mainImageUrl = widget?.data?.model_info?.[modelId]?.model_image_url || "";
 
-  const rawOffers = widget.data.offers;
+  const rawOffers = widget?.data?.offers || [];
   const products: Offer[] = rawOffers.slice(0, 4).map((item) => ({
     offer_id: item.match_id.toString(),
     name: item.offer.name,

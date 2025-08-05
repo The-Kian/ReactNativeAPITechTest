@@ -1,0 +1,185 @@
+{
+  "widget": {
+    "data": {
+      "model_info": {
+        "250620": {
+          "id": 250620,
+          "brand": "Microsoft",
+          "model_name": "Xbox One S",
+          "requested_model": "xbox_one_s",
+          "model_image_url": "https://images.fie.futurecdn.net/logos/models/7yla0fkngi3knrli-16019803836296.jpg",
+          "name": "Microsoft Xbox One S",
+          "verdict": "Xbox One S is the pinnacle of what Microsoft set out to create with the original Xbox One. Despite releasing in 2016, the One S is everything a game console should be: sleek, powerful and well-stocked. It's not quite at Xbox One X's level in terms of performance, but the Xbox One S makes a compelling argument in how it balances power and price point.",
+          "retailer_verdict": null,
+          "manufacturer_verdict": null,
+          "pros": [
+            "Vastly reduced physical footprint",
+            "4K & HDR streaming",
+            "HDR gaming"
+          ],
+          "cons": [
+            "Needs adapter for Kinect",
+            "4K gaming limited to upscaling"
+          ],
+          "score": 9,
+          "review_link": "https://techradar.com/reviews/gaming/games-consoles/xbox-one-s-1323399/review",
+          "parents": [
+            {
+              "id": 287135,
+              "name": "Game Consoles"
+            },
+            {
+              "id": 286520,
+              "name": "Gaming"
+            },
+            {
+              "id": 286325,
+              "name": "Electronics"
+            },
+            {
+              "id": 1,
+              "name": "Everything"
+            }
+          ],
+          "child_count": null,
+          "reviews": {
+            "asin": {
+              "review_count": 604,
+              "review_score": 4.7,
+              "review_score_formatted": 9,
+              "area": "GB",
+              "code_name": "asin",
+              "code_value": "B01KI13K0W",
+              "reviews_url": "https://target.georiot.com/Proxy.ashx?tsid=8428&GR_URL=https%3A%2F%2Fwww.amazon.co.uk%2Freviews%2FB01KI13K0W%3Ftag%3Dhawk-future-21%26ascsubtag%3Dhawk-custom-tracking-21"
+            }
+          },
+          "pull_quote": null
+        },
+        "1": {
+          "id": 1,
+          "brand": null,
+          "model_name": "Everything",
+          "requested_model": null,
+          "model_image_url": "https://images.fie.futurecdn.net/4wb8tuygm9kt7pr4-16427160582268.jpg",
+          "name": "Everything",
+          "verdict": null,
+          "retailer_verdict": null,
+          "manufacturer_verdict": null,
+          "pros": [],
+          "cons": [],
+          "score": null,
+          "review_link": null,
+          "parents": [],
+          "child_count": null,
+          "reviews": {
+            "asin": {
+              "review_count": 4,
+              "review_score": 3.9,
+              "review_score_formatted": 8,
+              "area": "GB",
+              "code_name": "asin",
+              "code_value": "B07RHQHSKR",
+              "reviews_url": "https://target.georiot.com/Proxy.ashx?tsid=8428&GR_URL=https%3A%2F%2Fwww.amazon.co.uk%2Freviews%2FB07RHQHSKR%3Ftag%3Dhawk-future-21%26ascsubtag%3Dhawk-custom-tracking-21"
+            }
+          },
+          "pull_quote": null
+        }
+      },
+      "title": "Microsoft Xbox One S",
+      "last_update": 1747302635,
+      "counts": {
+        "broadband": 0,
+        "subscriptions": 0,
+        "contracts": 0,
+        "deals": 0,
+        "accessories": 0,
+        "fallback": 0,
+        "offers": 0,
+        "vouchers": 0,
+        "unique_codes": 0,
+        "offer_deals": 0,
+        "newsletter": 0,
+        "similar": 1,
+        "multimedia": 0,
+        "rewards": 0
+      },
+      "offers": [
+        {
+          "id": 108853847,
+          "match_id": 108853847,
+          "product_key": "20036-583204787",
+          "score": 19800,
+          "percentage": 100,
+          "click_count": 0,
+          "click_count_weekly": 0,
+          "click_count_monthly": 0,
+          "product_type": 200,
+          "bundle_models": [],
+          "model_matched": [
+            "Microsoft Xbox One S"
+          ],
+          "requested_model": "xbox_one_s",
+          "model": "Everything",
+          "model_id": 1,
+          "an": "Amazonuk",
+          "offer": {
+            "name": "Amazon UK View Similar",
+            "price": "0.00",
+            "in_stock": true,
+            "stock_quantity": null,
+            "currency_iso": "GBP",
+            "currency_symbol": "&pound;",
+            "link": "https://target.georiot.com/Proxy.ashx?tsid=8428&GR_URL=https%3A%2F%2Fwww.amazon.co.uk%2Fs%2Fref%3Dnb_sb_noss%3Fa%3Db%26field-keywords%3DMicrosoft+Xbox+One+S%26tag%3Dhawk-future-21%26ascsubtag%3Dhawk-custom-tracking-21",
+            "link_text": "Check Amazon",
+            "merchant_link_text": "Check Amazon",
+            "label": "No price information",
+            "percentage_saving": null,
+            "percentage_saving_label": null,
+            "money_saving": null,
+            "money_saving_label": null,
+            "product_note": null,
+            "audience": null,
+            "display_name": "Everything",
+            "display_labels": "",
+            "display_primary_label": ""
+          },
+          "image": "https://images.fie.futurecdn.net/logos/products/lqw1qkiffcgxv03b-15726068919623-100-80.png.webp",
+          "label_image": null,
+          "model_image": "https://images.fie.futurecdn.net/logos/models/7yla0fkngi3knrli-16019803836296-100-80.jpg.webp",
+          "shipping": {
+            "prime": false,
+            "url": null
+          },
+          "merchant": {
+            "id": 1027,
+            "name": "Amazon",
+            "url": "https://www.amazon.co.uk/",
+            "logo_url": "https://images.fie.futurecdn.net/logos/merchants/amazon-uk-14606342093191-100-80.png.webp",
+            "territory": "GB",
+            "preference": 0
+          },
+          "last_update": 1747302635
+        }
+      ],
+      "offer_types": [
+        "similar"
+      ],
+      "offer_type": "similar",
+      "event": null,
+      "sponsor": null,
+      "filters": [],
+      "pagination": {
+        "limit": 3,
+        "limit_contracts": 3,
+        "limit_deals": 4,
+        "offset": null
+      }
+    }
+  },
+  "models": {
+    "xbox_one_s": 250620
+  },
+  "area": "GB",
+  "battle": null,
+  "version": "master"
+}

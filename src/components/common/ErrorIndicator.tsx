@@ -1,13 +1,18 @@
 import { View, Text, StyleSheet } from 'react-native';
-const ErrorIndicator = ({errorMessage}) => {
+
+interface ErrorIndicatorProps {
+    errorMessage: string;
+}
+
+const ErrorIndicator = ({ errorMessage }: ErrorIndicatorProps) => {
     return (
         <View style={styles.container}>
-        <Text style={styles.errorText}>{errorMessage}</Text>
+            <Text style={styles.errorText} testID="error-message">{errorMessage}</Text>
         </View>
     );
-    }
-export default ErrorIndicator;
+};
 
+export default ErrorIndicator;
 
 const styles = StyleSheet.create({
     container: {
