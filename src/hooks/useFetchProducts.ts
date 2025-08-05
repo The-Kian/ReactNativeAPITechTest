@@ -1,57 +1,50 @@
+// src/hooks/useFetchProducts.ts
+
 import { useState, useEffect } from "react";
-import { ApiResponse } from "@app-types/api";
 import { Offer } from "@app-types/internal";
+import { transformApiData } from "@utils/apiDataTransformer";
 
-const API_ENDPOINT =
-  "https://search-api.fie.future.net.uk/widget.php?id=review&model_name=xbox_one_s&area=GB";
-const model_name = API_ENDPOINT.split("model_name=")[1].split("&")[0];
+const API_BASE_URL =
+  "https://search-api.fie.future.net.uk/widget.php?id=review&area=GB";
 
-export const useFetchProducts = () => {
+export const useFetchProducts = (modelName: string) => {
   const [products, setProducts] = useState<Offer[]>([]);
+  const [title, setTitle] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    if (!modelName) {
+      setIsLoading(false);
+      return;
+    }
+
     const fetchProducts = async () => {
-      setTimeout(async () => {
-        try {
-          const response = await fetch(API_ENDPOINT);
-          if (!response.ok)
-            throw new Error(`HTTP error! status: ${response.status}`);
+      setIsLoading(true);
+      setError(null);
 
-          const json: ApiResponse = await response.json();
+      try {
+        const response = await fetch(`${API_BASE_URL}&model_name=${modelName}`);
+        if (!response.ok)
+          throw new Error(`HTTP error! status: ${response.status}`);
 
-          const modelId = json.models[model_name]
+        const json = await response.json();
+        const { title: newTitle, products: newProducts } = transformApiData(
+          json,
+          modelName
+        );
 
-          const mainImageUrl = json.widget.data.model_info[modelId]?.model_image_url;
-
-          const rawOffers = json.widget.data.offers.slice(0, 4);
-
-          const offers: Offer[] = rawOffers.map((item) => ({
-            offer_id: item.match_id.toString(),
-            name: item.offer.name,
-            price: parseFloat(item.offer.price), 
-            currency_symbol: item.offer.currency_symbol,
-            link: item.offer.link,
-            image: mainImageUrl,
-            merchant: {
-              name: item.merchant.name,
-              logo_url: item.merchant.logo_url,
-            },
-          }));
-          setProducts(offers);
-        } catch (e) {
-          setError(
-            e instanceof Error ? e.message : "An unknown error occurred."
-          );
-          console.log(`🚀 - KP -  ~ fetchProducts ~ e.message:`, e.message);
-        } finally {
-          setIsLoading(false);
-        }
-      }, 1000); // Simulate a delay of 1 second
+        setTitle(newTitle);
+        setProducts(newProducts);
+      } catch (e) {
+        setError(e instanceof Error ? e.message : "An unknown error occurred.");
+      } finally {
+        setIsLoading(false);
+      }
     };
 
     fetchProducts();
-  }, []);
-  return { products, isLoading, error };
+  }, [modelName]);
+
+  return { products, title, isLoading, error };
 };

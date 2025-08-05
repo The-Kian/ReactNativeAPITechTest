@@ -28,6 +28,7 @@ interface ModelInfo {
 export interface ApiResponse {
   widget: {
     data: {
+      title: string;
       model_info: { [key: string]: ModelInfo };
       offers: RawApiOffer[];
     };
